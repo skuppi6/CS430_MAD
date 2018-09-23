@@ -1,0 +1,7 @@
+{
+  "name": "Mstock",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
