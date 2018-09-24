@@ -14,3 +14,44 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.login{
+background: #02000B;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.home{
+background:color($colors, dark);
+color:color($colors, light);
+margin-top:30px;
+background-image: url("../assets/imgs/LogoMakr_4Jp9ZI.png");
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.search{
+background:color($colors, dark);
+color:color($colors, light);
+}
+
+.about
+{
+background:color($colors, dark);
+color:color($colors, light);
+}
+
+.toolbar-title{
+text-align: center;
+}
+
+.buttons{
+  background:color($colors, secondary)
+}
+
+.ioncard{
+  background:color($colors, grey);
+}
+.tabs-md .tab-button-icon{
+color: #FFFFFF;
+}

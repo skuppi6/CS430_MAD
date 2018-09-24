@@ -4,14 +4,57 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="home">
+  <!--
+    <ion-card *ngFor="let item of storageItems">
+      <ion-card-content>
+        <ion-card-title>
+            {{item.symbol}}
+        </ion-card-title>
+          <ion-row>
+            <ion-col>Company Name:  {{item.companyName}}</ion-col>
+            <ion-col>Exchange: {{item.primaryExchange}}</ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col>PRICE: {{item.latestPrice}}</ion-col>
+          <ion-col>Change: {{item.change}}</ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col>Sector: {{item.sector}}</ion-col>
+          <ion-col>As of: {{item.latestTime}}</ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  -->
+  <!--<div text-center>-->
+    <!--<img src="../assets/imgs/LogoMakr_4Jp9ZI.png">-->
+  <!--</div>-->
+
+  <ion-list>
+    <ion-card class="ioncard" *ngFor="let item of storageItems">
+      <ion-card-content>
+        <ion-item-sliding>
+          <ion-item>
+            {{item.symbol}}
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="dark" (click)="deleteCard(item.symbol)">DELETE</button>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-row>
+          <ion-col>Company Name:  {{item.companyName}}</ion-col>
+          <ion-col>Exchange: {{item.primaryExchange}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>PRICE: {{item.latestPrice}}</ion-col>
+          <ion-col>Change: {{item.change}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Sector: {{item.sector}}</ion-col>
+          <ion-col>As of: {{item.latestTime}}</ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>
+

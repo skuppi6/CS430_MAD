@@ -7,12 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>search</ion-title>
+    <ion-title>Search</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="search">
+  <div text-center>
+    <img src="../assets/imgs/LogoMakr_4Jp9ZI.png">
+  </div>
+  <ion-grid style="margin-top:70px;">
+    <ion-row>
+      <ion-col width-50>
+        <ion-list>
+          <form id="submitForm" (ngSubmit)="submit()">
+            <ion-item>
+              <ion-label color="light" stacked>Ticker Symbol</ion-label>
+              <ion-input [(ngModel)]="ticker" name="ticker" type="text"></ion-input>
+            </ion-item>
+            <button class="buttons" ion-button type="submit" block>Submit</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
