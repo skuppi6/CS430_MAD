@@ -7,10 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePage } from '../pages/home/home';
 import { SearchPage } from '../pages/search/search';
 import { AboutPage } from '../pages/about/about';
-//import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
 import { TabsPage } from '../pages/tabs/tabs';
-// import { ContactPage } from '../pages/contact/contact';
-// import { LoginPage } from '../pages/login/login';
+import { LoginPage } from '../pages/login/login';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,9 +21,8 @@ import { StockProvider } from '../providers/stock/stock';
   declarations: [
     MyApp,
     AboutPage,
-    // ContactPage,
     HomePage,
-    // LoginPage,
+    LoginPage,
     SearchPage,
     TabsPage
   ],
@@ -38,8 +36,7 @@ import { StockProvider } from '../providers/stock/stock';
   entryComponents: [
     MyApp,
     AboutPage,
-    // LoginPage,
-    // ContactPage,
+    LoginPage,
     HomePage,
     SearchPage,
     TabsPage
@@ -49,7 +46,7 @@ import { StockProvider } from '../providers/stock/stock';
     HttpClientModule,
     StatusBar,
     SplashScreen,
-    //FingerprintAIO,
+    FingerprintAIO,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     StockProvider,
   ]

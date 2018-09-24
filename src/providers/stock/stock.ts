@@ -24,7 +24,7 @@ export class StockProvider
     let data = this.http.get(this.url+symbol+'/book');
 
     data.subscribe(result => { this.items = result; this.storage.set(this.items.quote.symbol,
-                                                                     this.items.quote); }, (error: any) => { if (error); console.log("this is an error: " + this.error); });
+                                                                     this.items.quote); }, (error: any) => { if (error); console.log("this is an error: " + error); });
   }
 
   // Deletes stock storage on local storage

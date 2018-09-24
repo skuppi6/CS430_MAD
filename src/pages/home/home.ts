@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  // items:any;
+  items:any;
   storageItems: Array<StorageItem>;
 
   constructor(public navCtrl: NavController, private stockProvider:StockProvider,
