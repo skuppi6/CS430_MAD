@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
 import { StockProvider } from '../../providers/stock/stock';
 import { HomePage } from '../home/home';
 
@@ -13,7 +13,7 @@ export class SearchPage {
 ticker:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private stockProvider:StockProvider, private storage:Storage)
+              private stockProvider:StockProvider)
   {
 
   }

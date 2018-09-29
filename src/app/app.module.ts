@@ -16,6 +16,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StockProvider } from '../providers/stock/stock';
 
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireModule } from 'angularfire2';
+// import { FirebaseService } from './../providers/firebase-service';
+// import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
+
+// Initialize Firebase
+//  const firebaseConfig = {
+//    apiKey: "AIzaSyDMGV2aHcu92U9GkQrg7zgvO8gi41vLzFk",
+//    authDomain: "mstock-9539d.firebaseapp.com",
+//    databaseURL: "https://mstock-9539d.firebaseio.com",
+//    projectId: "mstock-9539d",
+//    storageBucket: "mstock-9539d.appspot.com",
+//    messagingSenderId: "387519631262"
+//  };
+//  firebase.initializeApp(config);
 
 @NgModule({
   declarations: [
@@ -30,6 +45,10 @@ import { StockProvider } from '../providers/stock/stock';
     BrowserModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
+    // AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // FirebaseService,
+    // FirebaseServiceProvider,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -49,6 +68,7 @@ import { StockProvider } from '../providers/stock/stock';
     FingerprintAIO,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     StockProvider,
+    // FirebaseServiceProvider,
   ]
 })
 export class AppModule {}

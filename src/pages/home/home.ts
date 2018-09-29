@@ -10,13 +10,13 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  items:any;
-  storageItems: Array<StorageItem>;
+  // items:any;
+  storageItems: any; // Array<StorageItem>;
 
   constructor(public navCtrl: NavController, private stockProvider:StockProvider,
               private storage:Storage)
   {
-     this.storageItems = [];
+     //this.storageItems = [];
      this.loadData();
   }
 
@@ -24,7 +24,7 @@ export class HomePage {
   loadData()
   {
     // key, index
-    this.storage.forEach((value: StorageItem) => { this.storageItems.push(value); });
+    this.storage.forEach((value) => { this.storageItems.push(value); });
   }
 
   // this function is called when user swipes to delete a card.
